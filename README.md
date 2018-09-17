@@ -24,9 +24,9 @@ Dessert | Ice Cream
 
 *Here are another 3 facts about myself, which 2 are true and 1 is false. Can you guess which one is false (see at the very end)?* :wink:
 
-* This is my third degree in post-secondary education :books:
-* I was a swimmer at the junior national level back in high school :swimmer:
-* I am married :ring:
+1. This is my third degree in post-secondary education :books:
+2. I was a swimmer at the junior national level back in high school :swimmer:
+3. I am married :ring:
 
 <br/>
 
@@ -75,3 +75,9 @@ Thank you for making it this far and hope you learned a few things about myself.
 - [x] I am married 
   * This past summer :bowtie:
 
+<br/>
+
+Gianluigi Buffon:
+
+> I've made a lot of mistakes in my life, but I think that's normal for someone who wants to grow and develop. 
+> You will have to overcome plenty of obstacles, and it is normal that you should stumble sometimes.

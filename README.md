@@ -6,7 +6,7 @@
 
 ## About Myself
 
-I am a Year 2 student in the Masters of Science program from the Faculty of [School Population and Public Health (SPPH)](http://www.spph.ubc.ca/). My name is pronounced the same as 'earnest', but spelling is just a little bit different.
+I am a Year 2 student in the Masters of Science program from the Faculty of [School Population and Public Health (SPPH)](http://www.spph.ubc.ca/). My first name is pronounced the same as the word 'earnest', and the spelling is almost the same.
 
 <br/>
 

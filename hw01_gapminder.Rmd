@@ -1,0 +1,144 @@
+---
+title: "STAT545 HW01"
+author: "Ernest Lai"
+date: "September 17, 2018"
+output: html_document
+---
+
+<br/>
+
+# R Markdown
+
+This is the R Markdown document for hw01, which explores the **gapminder** dataset. To explore the data, we first have to install the 'gapminder' package through **install.packages('gapminder')** and open the dataset into our R-Studio environment through **library(gapminder)**.
+
+<br/>
+*For additional information on functions used in this exercise, type "?" and the function as one word in the console and the R help documentation will explain the function and the object needed to run the function successfully*
+ 
+
+## Viewing and Exploring the dataset
+
+To first explore contents of the dataset, we should assign our gapminder dataset to a variable called 'data'. Prior to this, please be reminded to do a one-time installation of gapminder dataset via **install.packages('gapminder')**:
+
+<br/>
+
+```{r view, message=FALSE, warning=FALSE}
+
+library(gapminder)
+data <- gapminder
+
+```
+*The statements message=FALSE and warning=FALSE excludes external warning messages or output messages from being printed in the HTML version*
+
+<br/>
+
+From this point on, any work associated with gapminder in this R-Studio session will be referenced to the variable called 'data'. Lets try exploring the gapminder dataset:
+
+<br/>
+```{r explore, message=FALSE, warning=FALSE, tidy=FALSE}
+
+ # Provides number of observations and variables, also the class of each variable in the gapminder dataset
+str(data)
+
+# Information provided for each variable for the first 6 observed entries in the gapminder dataset
+head(data) 
+
+# Number of rows in gapminder dataset (or number of observations)
+nrow(data) 
+
+# Number of columns in gapminder dataset (or number of variables)
+ncol(data) 
+
+```
+
+<br/>
+
+## Summary Statistics
+We can produce summary statistics for specific variables within the gapminder dataset, by adding the syntax '$' after the gapminder dataset name (data), followed by the variable name in the gapminder dataset
+
+<br/>
+```{r summary, message=FALSE, warning=FALSE}
+
+# Gives the frequency of each country in the dataset
+table(data$country) 
+
+# Gives the frequency of each continent in the dataset
+table(data$continent) 
+
+# Number of countries in the data set
+length(
+  table(data$country)
+  ) 
+
+# Number of continents in the data set
+length(
+  table(data$continent)
+  ) 
+
+# Gives the average population based on all the countries in the data set
+mean(data$pop) 
+
+# Gives the variance of the population based on all countries in the data set
+var(data$pop) 
+
+# Gives the 1st quartile, median, third quartile, minimum, maximum, and average values for GDP per capita 
+summary(data$gdpPercap) 
+
+```
+
+<br/>
+
+## Summary Statistics with Specific Requirements
+
+As seen in the dataset, there are a lot different countries being observed.  What if we are interested in the average or range of the population for a specific country? Or GDP per capita given a certain continent? Or even average population with a given range of GDP per capita?
+
+<br/> 
+
+```{r specifics, message = FALSE, warning=FALSE}
+
+# Takes the average population for Montenegro (average population, given country = Montenegro)
+mean(
+  data$pop[data$country == "Montenegro"]
+  ) 
+
+# Max, min, mean, median, Q1, and A3 values for population in the Asia continent
+summary(
+  data$pop[data$continent == "Asia"]
+  ) 
+
+# Max, min, mean, median, Q1, and A3 values for GDP per capita in the Europe continent
+summary(
+  data$gdpPercap[data$continent == "Europe"]
+  ) 
+
+# Mean population of countries with GDP per capita between 1202.1 and 3531.8 inclusive.
+mean(
+  data$pop[data$gdpPercap >= '1202.1' & data$gdpPercap <= '3531.8']
+  ) 
+```
+
+<br/>
+
+## Including Plots
+
+Plots can also be made for each variable. Which plot we use is dependent on the type of data we are dealing with (ie. continuous, discrete, etc)
+
+<br/>
+```{r  plots, message = FALSE, warning = FALSE}
+# Boxplot of population for Morocco
+boxplot(
+  data$pop[data$country == 'Morocco'], 
+  ylab = 'Population', xlab ='Country', main = 'Frequency of Each Continent in gapminder Dataset'
+  )
+
+# Boxplot of life expectancy for each continent
+boxplot(data$lifeExp ~ data$continent, 
+        xlab = 'Continent', ylab = 'Life Expectancy (by Years)', main = 'Boxplot of Life Expectancy (in
+        Years) by Continent'
+        ) 
+
+# Histogram of Life Expectancy for the African Continent
+hist(data$lifeExp[data$continent =='Africa'], 
+     xlab='Life Expectancy (in Years)', ylab='Frequency', main = 'Life Expectancy (in Years) for Africa)'
+     )
+```
+

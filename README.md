@@ -1,6 +1,8 @@
 # Welcome to the HW01 Repository (by Ernest Lai)
 
-**This is the STAT 545A HW01 Repository of Ernest Lai, this repo contains contents for assignment 1. For information regarding assignment 1, please refer to [STAT 545A assignment](https://github.com/STAT545-UBC/Classroom/blob/master/assignments/hw01/hw01.md)**
+**This is the STAT 545A HW01 Repository of Ernest Lai, this repo contains contents for assignment 1. This README file will allow you to get to know some facts about myself (with some github markdown functions :wink:). In addition, there will be two files exploring the gapminder dataset - the hw01_gapminder file in markdown (.Rmd) and webpage format (.html).**
+
+**For information regarding assignment 1, please refer to [STAT 545A assignment](https://github.com/STAT545-UBC/Classroom/blob/master/assignments/hw01/hw01.md)**
 
 *For general information and classroom content related to STAT 545, please visit [this link](https://github.com/STAT545-UBC/Classroom)*
 
